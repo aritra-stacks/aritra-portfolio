@@ -26,7 +26,7 @@ export const projects = [
     description: 'A personal portfolio showcasing my education, technical skills, achievements, workshops, and development journey.',
     tech: ['React.js', 'JavaScript', 'CSS', 'Three.js / React Three Fiber'],
     status: 'In Progress',
-    repositoryPlaceholder: 'GitHub repository link to be added.',
+    link: 'https://github.com/aritra-stacks/aritra-portfolio',
   },
   {
     title: 'College Finder — Resof Demo',
