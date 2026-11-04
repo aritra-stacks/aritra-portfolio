@@ -3,6 +3,9 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 function SocialMark({ type }) {
+  if (type === 'reddit') {
+    return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.3a7.8 7.8 0 0 0-6.9 4.1 2.1 2.1 0 1 0-1.7 3.8 5.2 5.2 0 0 0-.1 1c0 3.7 3.9 6.7 8.7 6.7s8.7-3 8.7-6.7a5.2 5.2 0 0 0-.1-1 2.1 2.1 0 1 0-1.7-3.8A7.8 7.8 0 0 0 12 4.3Z" /><path d="m14.8 7.1.9-3.3 2.1.5" /><circle cx="8.8" cy="12.2" r="1" /><circle cx="15.2" cy="12.2" r="1" /><path d="M9.2 15.2a4.3 4.3 0 0 0 5.6 0" /></svg>
+  }
   if (type === 'email') {
     return <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m4 7 8 6 8-6" /></svg>
   }
@@ -48,6 +51,7 @@ export default function Hero({ onSelect, contact }) {
     { id: 'whatsapp', name: 'WhatsApp', detail: 'Start a direct chat', href: contact?.whatsapp },
     { id: 'instagram', name: 'Instagram', detail: '@quantumaritra', href: instagramUsername ? `https://ig.me/m/${instagramUsername}` : contact?.instagram },
     { id: 'telegram', name: 'Telegram', detail: 'Message me directly', href: contact?.telegram },
+    { id: 'reddit', name: 'Reddit', detail: 'Open my Reddit profile', href: contact?.reddit },
   ].filter((channel) => channel.href)
 
   return (

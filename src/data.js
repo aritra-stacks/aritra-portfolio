@@ -136,4 +136,5 @@ export const contact = {
   instagram: 'https://www.instagram.com/quantumaritra/',
   whatsapp: 'https://wa.me/919999298584',
   telegram: 'https://t.me/+919999298584',
+  reddit: '', // Add your Reddit profile URL here to show it in the Say hi menu.
 }
