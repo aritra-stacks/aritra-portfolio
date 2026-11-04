@@ -122,6 +122,38 @@ export const certificates = [
 ]
 export const journey = [
   {
+    id: 'iit-madras-start',
+    date: '2025 · IIT Madras',
+    title: 'Started My IIT Madras Journey',
+    detail: 'Qualified for the IIT Madras BS Programme in Data Science and Applications and began my undergraduate learning journey.',
+    icon: 'education',
+    category: 'Academic milestone',
+  },
+  {
+    id: 'dual-academic-journey',
+    date: '2026 · IIT Madras + University of Delhi',
+    title: 'Started My Dual Academic Journey',
+    detail: 'Began pursuing the IIT Madras BS Programme alongside my undergraduate studies at Acharya Narendra Dev College, University of Delhi.',
+    icon: 'books',
+    category: 'Education',
+  },
+  {
+    id: 'started-programming',
+    date: '2026',
+    title: 'Started Programming',
+    detail: 'Began learning Python and C++ to develop strong programming and problem-solving fundamentals.',
+    icon: 'code',
+    category: 'Learning to code',
+  },
+  {
+    id: 'exploring-ai',
+    date: '2026',
+    title: 'Exploring AI & Technology',
+    detail: 'Started exploring artificial intelligence, data science, and emerging technology through hands-on learning and community events.',
+    icon: 'ai',
+    category: 'Exploration',
+  },
+  {
     id: 'neo4j-hackathon',
     date: '2026 · IIIT Delhi',
     title: 'Neo4j Hackathon – IIIT Delhi',
@@ -136,6 +168,14 @@ export const journey = [
     detail: 'Attended an AI Agent workshop through Indian Data Club. Explored AI Build Agents and learned about building AI-powered solutions.',
     icon: 'ai',
     category: 'Practical AI learning',
+  },
+  {
+    id: 'resof-college-finder',
+    date: '2026',
+    title: 'Resof – College Finder Project',
+    detail: 'A JavaScript and HTML college-finder demo created by my teammate. I forked the repository to my GitHub and explored it as a project before starting my personal portfolio.',
+    icon: 'code',
+    category: 'Project experience',
   },
   {
     id: 'portfolio-website',

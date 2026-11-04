@@ -1,6 +1,24 @@
 import { useEffect, useRef } from 'react'
 
 function JourneyIcon({ type }) {
+  if (type === 'education') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m2 9 10-5 10 5-10 5L2 9Z" />
+        <path d="M6 11v5c3.8 3 8.2 3 12 0v-5M22 9v6" />
+      </svg>
+    )
+  }
+
+  if (type === 'books') {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 4h13a2 2 0 0 1 2 2v14H6a2 2 0 0 1-2-2V4Z" />
+        <path d="M4 17a2 2 0 0 1 2-2h13M8 8h7m-7 4h7" />
+      </svg>
+    )
+  }
+
   if (type === 'network') {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true">

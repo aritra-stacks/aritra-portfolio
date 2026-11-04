@@ -288,9 +288,14 @@ function HackathonScene() {
 }
 
 const journeyMilestones = [
-  { year: '2026', label: 'NEO4J HACKATHON', position: [-0.2, 1.05, 0] },
-  { year: '2026', label: 'AI AGENT WORKSHOP', position: [0.18, 0, 0.08] },
-  { year: '2026', label: 'PORTFOLIO WEBSITE', position: [-0.2, -1.05, 0] },
+  { year: '2025', label: 'IIT MADRAS BS', position: [-0.2, 1.75, 0] },
+  { year: '2026', label: 'DUAL ACADEMICS', position: [0.18, 1.25, 0.08] },
+  { year: '2026', label: 'STARTED PROGRAMMING', position: [-0.2, 0.75, 0.12] },
+  { year: '2026', label: 'EXPLORING AI', position: [0.18, 0.25, 0.08] },
+  { year: '2026', label: 'NEO4J HACKATHON', position: [-0.2, -0.25, 0.12] },
+  { year: '2026', label: 'AI AGENT WORKSHOP', position: [0.18, -0.75, 0.08] },
+  { year: '2026', label: 'RESOF COLLEGE FINDER', position: [-0.2, -1.25, 0.12] },
+  { year: '2026', label: 'PORTFOLIO WEBSITE', position: [0.18, -1.75, 0] },
 ]
 
 function JourneyScene() {
@@ -303,7 +308,7 @@ function JourneyScene() {
   const path = journeyMilestones.map(({ position }) => position)
 
   return (
-    <group ref={timeline} position={[1.65, 0, 0]} scale={0.88}>
+    <group ref={timeline} position={[1.65, 0, 0]} scale={0.78}>
       <Line points={path} color="#8b5cf6" lineWidth={2.2} transparent opacity={0.62} />
       {journeyMilestones.map((milestone, index) => (
         <group key={`${milestone.year}-${milestone.label}`} position={milestone.position}>
