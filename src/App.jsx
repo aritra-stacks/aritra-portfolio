@@ -5,6 +5,7 @@ import Section from './components/Section'
 import SpaceScene from './components/SpaceScene'
 import CardList from './components/CardList'
 import ContactSection from './components/ContactSection'
+import JourneyTimeline from './components/JourneyTimeline'
 import {
   about,
   education,
@@ -16,6 +17,7 @@ import {
   certificates,
   journey,
   contact,
+  birthday,
 } from './data'
 
 export default function App() {
@@ -43,7 +45,7 @@ export default function App() {
   return (
     <>
       <SpaceScene active={active} />
-      <Navbar active={active} onSelect={setActive} />
+      <Navbar active={active} onSelect={setActive} birthday={birthday} />
       <main>
         {active === 'home' && <Hero onSelect={setActive} contact={contact} />}
 
@@ -290,20 +292,8 @@ export default function App() {
 )}
 
         {active === 'journey' && (
-          <Section id="journey" title="My Learning Journey">
-            {journey.length === 0 ? (
-              <p className="empty">Jald hi add hoga.</p>
-            ) : (
-              <div className="timeline">
-                {journey.map((j, i) => (
-                  <div className="timeline-item" key={i}>
-                    <small>{j.when}</small>
-                    <h3>{j.title}</h3>
-                    <p>{j.detail}</p>
-                  </div>
-                ))}
-              </div>
-            )}
+          <Section id="journey" title="My Journey">
+            <JourneyTimeline items={journey} />
           </Section>
         )}
 

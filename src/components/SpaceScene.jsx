@@ -288,11 +288,9 @@ function HackathonScene() {
 }
 
 const journeyMilestones = [
-  { year: '2025', label: 'STARTED IIT MADRAS', position: [-0.2, 1.45, 0] },
-  { year: '2026', label: 'DUAL ACADEMIC JOURNEY', position: [0.18, 0.72, 0.08] },
-  { year: '2026', label: 'LEARNING TO CODE', position: [-0.16, 0, 0.12] },
-  { year: '2026', label: 'EXPLORING AI', position: [0.18, -0.72, 0.08] },
-  { year: '2026', label: 'BUILDING PROJECTS', position: [-0.2, -1.45, 0] },
+  { year: '2026', label: 'NEO4J HACKATHON', position: [-0.2, 1.05, 0] },
+  { year: '2026', label: 'AI AGENT WORKSHOP', position: [0.18, 0, 0.08] },
+  { year: '2026', label: 'PORTFOLIO WEBSITE', position: [-0.2, -1.05, 0] },
 ]
 
 function JourneyScene() {

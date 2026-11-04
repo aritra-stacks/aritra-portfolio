@@ -121,11 +121,30 @@ export const certificates = [
   },
 ]
 export const journey = [
-  { when: '2025', title: 'Started My IIT Madras Journey', detail: 'Qualified for the IIT Madras BS Programme in Data Science and Applications.' },
-  { when: '2026', title: 'Started My Dual Academic Journey', detail: 'Pursuing my IIT Madras BS Programme alongside undergraduate studies at Acharya Narendra Dev College, University of Delhi.' },
-  { when: '2026', title: 'Started Programming', detail: 'Began learning Python and C++ to develop strong programming and problem-solving fundamentals.' },
-  { when: '2026', title: 'Exploring AI & Technology', detail: 'Participated in technology events, hackathons, and AI-focused workshops.' },
-  { when: '2026', title: 'Building My Developer Portfolio', detail: 'Started developing my personal portfolio and exploring modern web technologies.' },
+  {
+    id: 'neo4j-hackathon',
+    date: '2026 · IIIT Delhi',
+    title: 'Neo4j Hackathon – IIIT Delhi',
+    detail: 'Participated in a hackathon organized at IIIT Delhi and got exposure to Neo4j and graph database technology.',
+    icon: 'network',
+    category: 'Hackathon experience',
+  },
+  {
+    id: 'ai-agent-workshop',
+    date: '2026 · Indian Data Club',
+    title: 'Paytm Skymark – AI Agent Workshop',
+    detail: 'Attended an AI Agent workshop through Indian Data Club. Explored AI Build Agents and learned about building AI-powered solutions.',
+    icon: 'ai',
+    category: 'Practical AI learning',
+  },
+  {
+    id: 'portfolio-website',
+    date: '2026',
+    title: 'Personal Portfolio Website',
+    detail: 'Started building my portfolio with modern web technologies and interactive 3D elements. It showcases my education, technical skills, projects, achievements, and professional growth.',
+    icon: 'code',
+    category: 'Building in public',
+  },
 ]
 
 export const contact = {
@@ -138,3 +157,6 @@ export const contact = {
   telegram: 'https://t.me/+919999298584',
   reddit: 'https://www.reddit.com/user/IITIAN_ARITRA_DAS_DS/',
 }
+
+// Birthday month is 1-12; update this object whenever the birthday date changes.
+export const birthday = { month: 8, day: 22 }
