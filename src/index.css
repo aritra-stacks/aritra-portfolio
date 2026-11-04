@@ -24,6 +24,13 @@ body[data-page='education'] {
   --purple: #fbbf24;
   --blue: #22d3ee;
   --muted: #cbd5e1;
+  background-image:
+    linear-gradient(rgba(4, 11, 24, 0.76), rgba(4, 11, 24, 0.86)),
+    url('/education-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 body[data-page='certificates'] {
