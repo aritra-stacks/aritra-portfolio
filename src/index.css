@@ -741,7 +741,8 @@ body[data-page='certificates'] .category-button.active {
 .contact-icon-wrap .contact-icon-github,
 .contact-icon-wrap .contact-icon-linkedin,
 .contact-icon-wrap .contact-icon-whatsapp,
-.contact-icon-wrap .contact-icon-telegram { fill: currentColor; stroke: none; }
+.contact-icon-wrap .contact-icon-telegram,
+.contact-icon-wrap .contact-icon-reddit { fill: currentColor; stroke: none; }
 .contact-icon-wrap .contact-icon-dot { fill: currentColor; stroke: none; }
 .contact-card:hover .contact-icon-wrap {
   transform: scale(1.06);
@@ -750,6 +751,7 @@ body[data-page='certificates'] .category-button.active {
 }
 .contact-card-instagram .contact-icon-wrap { color: #f0abfc; }
 .contact-card-whatsapp .contact-icon-wrap { color: #86efac; }
+.contact-card-reddit .contact-icon-wrap { color: #ff7043; }
 .contact-card-copy {
   display: flex;
   min-width: 0;
