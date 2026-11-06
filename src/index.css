@@ -557,7 +557,7 @@ body[data-page='certificates'] .card:hover {
 /* About page */
 .about {
   display: grid;
-  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
   align-items: center;
   gap: clamp(28px, 5vw, 64px);
   margin-top: 16px;
@@ -569,12 +569,22 @@ body[data-page='certificates'] .card:hover {
   backdrop-filter: blur(12px);
 }
 .about-photo {
-  width: min(100%, 250px);
+  width: min(100%, 300px);
   aspect-ratio: 1;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(167, 139, 250, 0.8);
   box-shadow: 0 0 0 10px rgba(139, 92, 246, 0.08), 0 0 48px rgba(139, 92, 246, 0.28);
+  animation: about-photo-float 5s ease-in-out infinite;
+  transition: filter 0.3s ease;
+}
+.about-photo:hover {
+  animation-play-state: paused;
+  filter: drop-shadow(0 0 22px rgba(167, 139, 250, 0.65));
+}
+@keyframes about-photo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
 }
 .about-content { min-width: 0; }
 .about-eyebrow {
@@ -615,9 +625,12 @@ body[data-page='certificates'] .card:hover {
 .learning-indicator { width: 8px; height: 8px; border-radius: 50%; background: #67e8f9; box-shadow: 0 0 12px rgba(103, 232, 249, 0.8); }
 @media (max-width: 680px) {
   .about { grid-template-columns: 1fr; justify-items: center; text-align: center; }
-  .about-photo { width: 178px; }
+  .about-photo { width: min(72vw, 230px); }
   .about-tags { justify-content: center; }
   .about-learning { justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-photo { animation: none; }
 }
 
 /* Code window */
