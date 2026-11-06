@@ -570,11 +570,13 @@ body[data-page='certificates'] .card:hover {
 }
 .about-photo {
   width: min(100%, 300px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  object-fit: cover;
+  height: auto;
+  aspect-ratio: auto;
+  border-radius: 26px;
+  object-fit: contain;
   border: 3px solid rgba(167, 139, 250, 0.8);
-  box-shadow: 0 0 0 10px rgba(139, 92, 246, 0.08), 0 0 48px rgba(139, 92, 246, 0.28);
+  background: rgba(8, 7, 22, 0.7);
+  box-shadow: 0 0 0 8px rgba(139, 92, 246, 0.08), 0 0 42px rgba(139, 92, 246, 0.25);
   animation: about-photo-float 5s ease-in-out infinite;
   transition: filter 0.3s ease;
 }
