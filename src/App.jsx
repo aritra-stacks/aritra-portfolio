@@ -53,27 +53,19 @@ export default function App() {
           <Section id="about" title="About Me">
             <div className="about">
               <img src="/profile-preview.jpg" alt="Aritra Das" className="about-photo" loading="lazy" decoding="async" />
-
-              <div className="code-window">
-                <div className="code-bar">
-                  <span className="dot red" />
-                  <span className="dot yellow" />
-                  <span className="dot green" />
-                  <span className="code-title">about.js</span>
+              <div className="about-content">
+                <span className="about-eyebrow">CURIOUS BY NATURE · BUILDING STEP BY STEP</span>
+                <h2>Aspiring Software Developer<br /><span>&amp; AI Engineer</span></h2>
+                <p className="about-text">{about}</p>
+                <div className="about-focus">
+                  <h3>Areas I’m exploring</h3>
+                  <div className="about-tags">
+                    {interests.map((interest) => <span className="about-tag" key={interest}>{interest}</span>)}
+                  </div>
                 </div>
-                <pre className="code-body">
-{`const aritra = {
-  name: "Aritra Das",
-  studies: ["IIT Madras BS", "Delhi University"],
-  learning: ["Python", "C++", "Web Dev"],
-  goal: "AI Engineer & Data Scientist",
-};`}
-                  <span className="cursor">▋</span>
-                </pre>
+                <p className="about-learning"><span className="learning-indicator" /> Currently learning Python and C++</p>
               </div>
             </div>
-
-            {about && <p className="about-text">{about}</p>}
           </Section>
         )}
 
@@ -299,8 +291,10 @@ export default function App() {
 
         {active === 'resume' && (
           <Section id="resume" title="Resume">
-            <a href="/resume.pdf" className="btn" download="Aritra_Das_Resume.pdf">Download Resume</a>
-            <a href="/resume.pdf" className="card-link" target="_blank" rel="noreferrer">Preview Resume ↗</a>
+            <div className="resume-actions">
+              <a href="/resume.pdf" className="btn" download="Aritra_Das_Resume.pdf">Download Resume</a>
+              <a href="/resume.pdf" className="btn resume-preview" target="_blank" rel="noreferrer">Preview Resume ↗</a>
+            </div>
           </Section>
         )}
 
