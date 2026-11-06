@@ -237,48 +237,6 @@ function CertificatesScene() {
   )
 }
 
-const skillNodes = [
-  { label: 'PYTHON', position: [-1.35, 0.9, 0] },
-  { label: 'C++', position: [0.1, 1.25, 0.2] },
-  { label: 'AI', position: [1.35, 0.55, -0.1] },
-  { label: 'DATA', position: [1.15, -0.9, 0.1] },
-  { label: 'ML', position: [-0.4, -1.2, -0.15] },
-  { label: 'CODE', position: [-1.45, -0.45, 0.1] },
-]
-
-function SkillsScene() {
-  const network = useRef()
-  useFrame((state) => {
-    network.current.rotation.y += (state.pointer.x * 0.12 - network.current.rotation.y) * 0.025
-    network.current.rotation.x += (-state.pointer.y * 0.08 - network.current.rotation.x) * 0.025
-    network.current.position.y = Math.sin(state.clock.elapsedTime * 0.45) * 0.08
-  })
-
-  return (
-    <group ref={network} position={[1.25, 0, 0]} scale={0.82}>
-      <mesh>
-        <icosahedronGeometry args={[0.62, 1]} />
-        <meshStandardMaterial color="#5520a8" emissive="#7c3aed" emissiveIntensity={0.45} wireframe />
-      </mesh>
-      {skillNodes.map((node) => (
-        <group key={node.label} position={node.position}>
-          <mesh>
-            <sphereGeometry args={[0.085, 16, 16]} />
-            <meshStandardMaterial color="#a78bfa" emissive="#8b5cf6" emissiveIntensity={1.5} />
-          </mesh>
-          <Text position={[0, -0.22, 0]} fontSize={0.14} color="#c4b5fd" anchorX="center" anchorY="middle">
-            {node.label}
-          </Text>
-        </group>
-      ))}
-      <mesh rotation={[Math.PI / 2.5, 0.15, 0]}>
-        <torusGeometry args={[1.95, 0.012, 8, 96]} />
-        <meshStandardMaterial color="#38bdf8" emissive="#38bdf8" emissiveIntensity={0.7} />
-      </mesh>
-    </group>
-  )
-}
-
 function ProjectsScene() {
   return null
 }
@@ -413,9 +371,7 @@ export default function SpaceScene({ active }) {
           <EducationScene />
         ) : active === 'certificates' ? (
           <CertificatesScene />
-        ) : active === 'skills' ? (
-          <SkillsScene />
-        ) : active === 'projects' ? (
+        ) : active === 'skills' ? null : active === 'projects' ? (
           <ProjectsScene />
         ) : active === 'hackathons' ? (
           <HackathonScene />
