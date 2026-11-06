@@ -101,6 +101,17 @@ export default function App() {
 
         {active === 'skills' && (
           <Section id="skills" title="Technical Skills">
+            <div className="skills-ambient" aria-hidden="true">
+              {[0, 1].map((row) => (
+                <div className={`skills-ambient-row ${row === 1 ? 'reverse' : ''}`} key={row}>
+                  <div className="skills-ambient-track">
+                    {[...skills, ...skills].map((skill, index) => (
+                      <span key={`${skill.name}-${index}`}>{skill.name}</span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
             {skills.length === 0 ? (
               <p className="empty">Jald hi add hoga.</p>
             ) : (
