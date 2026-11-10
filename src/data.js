@@ -51,6 +51,10 @@ export const hackathons = [
     title: 'AI Build Agent Workshop',
     date: '2026 · Hosted by Paytm Skymark · Organized through India Data Club',
     detail: 'Participated in a workshop and learned about AI Build Agents, AI-powered development workflows, and practical applications of AI tools.',
+    socialPosts: {
+      linkedin: '', // Add the direct LinkedIn post URL here after publishing.
+      instagram: '', // Add the direct Instagram post URL here after publishing.
+    },
   },
 ]
 
