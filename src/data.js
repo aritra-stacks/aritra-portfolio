@@ -43,8 +43,8 @@ export const hackathons = [
     date: '2026 · Indraprastha Institute of Information Technology Delhi (IIIT-Delhi)',
     detail: 'Attended a hackathon and explored collaborative technology and problem-solving activities. Neo4j was part of the event experience. Project details to be updated.',
     socialPosts: {
-      linkedin: '', // Add the direct LinkedIn post URL here after publishing.
-      instagram: '', // Add the direct Instagram post URL here after publishing.
+      linkedin: 'https://lnkd.in/p/ep5Zsj-2',
+      instagram: 'https://www.instagram.com/p/DeXEhF8GO4d/',
     },
   },
   {
@@ -52,8 +52,8 @@ export const hackathons = [
     date: '2026 · Hosted by Paytm Skymark · Organized through India Data Club',
     detail: 'Participated in a workshop and learned about AI Build Agents, AI-powered development workflows, and practical applications of AI tools.',
     socialPosts: {
-      linkedin: '', // Add the direct LinkedIn post URL here after publishing.
-      instagram: '', // Add the direct Instagram post URL here after publishing.
+      linkedin: 'https://lnkd.in/p/emgc6g6W',
+      instagram: 'https://www.instagram.com/p/Demw9MjE3tV/',
     },
   },
 ]
