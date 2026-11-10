@@ -443,6 +443,28 @@ body[data-page='certificates'] .card:hover {
 .card p { color: var(--muted); }
 .card small { color: var(--blue); }
 .card-link { display: inline-block; margin-top: 12px; color: var(--blue); text-decoration: none; }
+.event-post-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.event-post-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 9px 13px;
+  border: 1px solid rgba(167, 139, 250, 0.42);
+  border-radius: 12px;
+  background: rgba(12, 10, 29, 0.58);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.86rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.event-post-link:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.18); }
+.event-post-link-linkedin { border-color: rgba(10, 102, 194, 0.6); }
+.event-post-link-instagram { border-color: rgba(225, 48, 108, 0.56); }
+.event-post-link.is-pending { opacity: 0.66; cursor: not-allowed; }
+.event-post-link.is-pending:hover { transform: none; box-shadow: none; }
+.event-post-link span { color: var(--muted); font-size: 0.72rem; }
 
 /* Chips */
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }

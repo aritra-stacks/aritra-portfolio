@@ -42,6 +42,10 @@ export const hackathons = [
     title: 'IIIT Delhi Hackathon',
     date: '2026 · Indraprastha Institute of Information Technology Delhi (IIIT-Delhi)',
     detail: 'Attended a hackathon and explored collaborative technology and problem-solving activities. Neo4j was part of the event experience. Project details to be updated.',
+    socialPosts: {
+      linkedin: '', // Add the direct LinkedIn post URL here after publishing.
+      instagram: '', // Add the direct Instagram post URL here after publishing.
+    },
   },
   {
     title: 'AI Build Agent Workshop',

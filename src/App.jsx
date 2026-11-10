@@ -177,6 +177,37 @@ export default function App() {
                   <h3>{h.title}</h3>
                   <small>{h.date}</small>
                   <p>{h.detail}</p>
+                  {h.socialPosts && (
+                    <div className="event-post-links" aria-label="Hackathon social proof posts">
+                      {[
+                        ['linkedin', 'LinkedIn'],
+                        ['instagram', 'Instagram'],
+                      ].map(([platform, label]) => {
+                        const postUrl = h.socialPosts[platform]
+                        return postUrl ? (
+                          <a
+                            className={`event-post-link event-post-link-${platform}`}
+                            href={postUrl}
+                            key={platform}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            View {label} post ↗
+                          </a>
+                        ) : (
+                          <button
+                            className={`event-post-link event-post-link-${platform} is-pending`}
+                            key={platform}
+                            type="button"
+                            disabled
+                            title={`Add the direct ${label} post URL in src/data.js`}
+                          >
+                            View {label} post <span>Link pending</span>
+                          </button>
+                        )
+                      })}
+                    </div>
+                  )}
                 </>
               )}
             />
