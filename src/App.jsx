@@ -20,6 +20,60 @@ import {
   birthday,
 } from './data'
 
+function EventPostMenu({ posts, title }) {
+  const [isOpen, setIsOpen] = useState(false)
+  const panelId = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-post-options`
+  const platforms = [
+    ['linkedin', 'LinkedIn'],
+    ['instagram', 'Instagram'],
+  ]
+
+  return (
+    <div className="event-post-menu">
+      <button
+        className="event-post-trigger"
+        type="button"
+        aria-expanded={isOpen}
+        aria-controls={panelId}
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        {isOpen ? 'Close post options' : 'View post'} <span aria-hidden="true">{isOpen ? '−' : '↗'}</span>
+      </button>
+      {isOpen && (
+        <div className="event-post-options" id={panelId}>
+          <p>Which platform would you like to view it on?</p>
+          <div className="event-post-links">
+            {platforms.map(([platform, label]) => {
+              const postUrl = posts[platform]
+              return postUrl ? (
+                <a
+                  className={`event-post-link event-post-link-${platform}`}
+                  href={postUrl}
+                  key={platform}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {label} ↗
+                </a>
+              ) : (
+                <button
+                  className={`event-post-link event-post-link-${platform} is-pending`}
+                  key={platform}
+                  type="button"
+                  disabled
+                  title={`Add the direct ${label} post URL in src/data.js`}
+                >
+                  {label} <span>Link pending</span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function App() {
   const [active, setActive] = useState('home')
   const [selectedEducation, setSelectedEducation] = useState(null)
@@ -178,35 +232,7 @@ export default function App() {
                   <small>{h.date}</small>
                   <p>{h.detail}</p>
                   {h.socialPosts && (
-                    <div className="event-post-links" aria-label="Hackathon social proof posts">
-                      {[
-                        ['linkedin', 'LinkedIn'],
-                        ['instagram', 'Instagram'],
-                      ].map(([platform, label]) => {
-                        const postUrl = h.socialPosts[platform]
-                        return postUrl ? (
-                          <a
-                            className={`event-post-link event-post-link-${platform}`}
-                            href={postUrl}
-                            key={platform}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            View {label} post ↗
-                          </a>
-                        ) : (
-                          <button
-                            className={`event-post-link event-post-link-${platform} is-pending`}
-                            key={platform}
-                            type="button"
-                            disabled
-                            title={`Add the direct ${label} post URL in src/data.js`}
-                          >
-                            View {label} post <span>Link pending</span>
-                          </button>
-                        )
-                      })}
-                    </div>
+                    <EventPostMenu posts={h.socialPosts} title={h.title} />
                   )}
                 </>
               )}
